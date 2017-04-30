@@ -2,20 +2,28 @@ extends ./layout.pug
 
 block body
   div.logo
-    img(src='/images/originate-demo.png')
+    img(src='/images/logo-galeries-lafayette-16092015.png')
   hr
   nav.centered-layout
     ul
       li
-        a(href='#') AGENCY
+        a(href='#') FEMME
       li
-        a(href='#') PORTFOLIO
+        a(href='#') HOMME
       li
-        a(href='#') EVENTS
+        a(href='#') ENFANT
       li
-        a(href='#') RESOURCES
+        a(href='#') BEAUTÉ
       li
-        a(href='#') ABOUT US
+        a(href='#') MAISON/GOURMET
+      li
+        a(href='#') RESTAURANTS
+      li
+        a(href='#') SERVICES
+      li
+        a(href='#') CULTURE
+      li
+        a(href='#') ÉVÉNEMENTS
   header
     h1(data-wio-id=page.id)
       = page.get('page.title') ? page.get('page.title').asText() : ''
@@ -42,11 +50,11 @@ block body
           div.illustration(style='background-image: url(' + illustration + ')')
           div.text
             span.title
-              = feature.get('title').asText()
+              = feature.getText('title')
             if (feature.get('read-more-label'))
               - var link = feature.get('read-more') ? feature.get('read-more').url(ctx.linkResolver) : '#'
               a.button(href=link)
-                = feature.get('read-more-label').asText()
+                = feature.getText('read-more-label')
 
 
       when 'featured-text'
@@ -69,12 +77,12 @@ block body
           div.illustration(style='background-image: url(' + illustration + ')', class=isLeft ? 'illustration--left' : 'illustration--right')
           div.text
             span.label-top
-              = feature.get('top-label').asText()
+              = feature.getText('top-label')
             span.title
-              = feature.get('title').asText()
+              = feature.getText('title')
             hr
             p.summary
-              = feature.get('summary').asText()
+              = feature.getText('summary')
             if (feature.get('read-more-label'))
               - var link = feature.get('read-more') ? feature.get('read-more').url(ctx.linkResolver) : '#'
               a.button(href=link)

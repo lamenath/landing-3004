@@ -2,7 +2,7 @@ module.exports = {
 
   // This function will be used to generate links to Prismic.io documents
 
-  apiEndpoint: 'https://originate-demo.prismic.io/api',
+  apiEndpoint: 'https://gl-demo.prismic.io/api',
 
   // This function will be used to generate links to Prismic.io documents
   // As your project grows, you should update this function according to your routes
